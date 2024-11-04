@@ -29,22 +29,13 @@
             "button_link_2": "",
             "button_style_secondary_2": false
           }
-        },
-        "text_TQCYAj": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
         }
       },
       "block_order": [
         "heading",
-        "button",
-        "text_TQCYAj"
+        "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/theme_cover_image.jpg",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
