@@ -1,0 +1,64 @@
+<h2 style="text-align: {{ section.settings.title_aligment }}">{{ section.settings.title }}</h2>
+
+{% for blocks in section.blocks %}
+  {% if block.type == "promotion" %}
+    <h3>{{ block.settings.title }}</h3>
+{% endfor %}
+
+{% schema %}
+{
+  "name": "Promotion Group",
+  "tag": "section",
+  "class": "my-wrapper-class",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    },
+    {
+      "type": "select",
+      "label": "Title aligment",
+      "id": "title_aligment",
+      "options": [
+        {
+          "value": "left",
+          "label": "left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "right"
+        }
+      ],
+      "default": "left"
+    }
+  ],
+  "blocks": [
+     {
+      "type": "promotion",
+       "name": "Promotion",
+       "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "img_picker",
+          "id": "image",
+          "label": "Image"
+        }
+       ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Promotion Group"
+    }
+  ]
+}
+{% endschema %}
