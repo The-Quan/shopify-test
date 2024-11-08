@@ -1,15 +1,16 @@
 <h2 style="text-align: {{ section.settings.title_aligment }}">{{ section.settings.title }}</h2>
 
-<div style="display: flex; justify-content: center; gap: 20px;">
+<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   {% for block in section.blocks %}
     {% if block.type == 'promotion' %}
-      <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div style="display: flex; flex-direction: column; gap: 10px; width: 23%;">
         <h3 style="text-align: center">{{ block.settings.title }}</h3>
-        {{ block.settings.image | img_url: width: 500, height: 500 | img_tag }}
+        {{ block.settings.image | img_url: width: 500 | img_tag }}
       </div>
     {% endif %}
   {% endfor %}
 </div>
+
 
 {% schema %}
 {

@@ -1,0 +1,23 @@
+<p>hello word</p>
+<p>{{ section.settings.text }}</p>
+
+{% schema %}
+{
+  "name": "testShopify",
+  "tag": "section",
+  "class": "testShopify",
+  "settings": [
+    {
+      "id": "text",
+      "type": "text",
+      "label": "Text",
+      "default": "enter text"
+  }
+  ],
+  "presets": [
+    {
+        "name": "Test Shopify"
+    }
+  ]
+}
+{% endschema %}
