@@ -62,15 +62,10 @@
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
-    },
-    "test_F3KnJh": {
-      "type": "test",
-      "settings": {}
     }
   },
   "order": [
     "main",
-    "image_banner_VFEXnk",
-    "test_F3KnJh"
+    "image_banner_VFEXnk"
   ]
 }

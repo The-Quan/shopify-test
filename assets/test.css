@@ -1,9 +1,12 @@
-/* .btn{
-    display: flex;
+.btn-container{
+    display: grid;
+    grid-template-columns: repeat(4, auto);  
     gap: 20px;
-
     img{
-        width: 50%;
-        height: 200px;
+        width: 400px;
+        height: 400px;
     }
-} */
+    .btn-content{
+
+    }
+}

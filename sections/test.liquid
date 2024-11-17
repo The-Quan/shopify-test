@@ -1,31 +1,24 @@
 {{ 'test.css' | asset_url | stylesheet_tag }}
 
-{% comment %} 
-{% assign product = collections.first.products %}
-
-{% for data in product %}
-  {{ data.images.first  | img_url: width: 500, height: 500 | img_tag }}
-{% endfor %} {% endcomment %}
-
-<p>hello</p>
-{{ collections.first.products.first | json }}
-
-{% assign data = collection.products %}
-
-<div class="btn">
-    {% for product in data %}
-        <img src="{{ product.images.first | img_url: '1000x1000'}} ">  
-        {% endfor %}
+<div class="btn-container">
+  {% assign data = collections.first.products %}
+  {% for product in data %}
+   <div class="btn-content">
+    <img src="{{ product.images.first | image_url: width: 500, height: 500}}">
+   <p>{{ product.title }}</p>
+     <p>{{ product.price }} VND</p>
+   </div>
+  {% endfor %}
 </div>
 
 {% schema %}
 {
-    "name": "shopify-test",
-    "tag": "section",
-    "presets": [
-        {
-            "name": "shopify test"
-        }
-    ]
+  "name": "shopify-test",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "shopify test"
+    }
+  ]
 }
-{% endschema %} 
+{% endschema %}
