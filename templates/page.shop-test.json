@@ -62,22 +62,15 @@
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
-<<<<<<< HEAD
     },
-    "test_BFjetJ": {
+    "test_JdrEfU": {
       "type": "test",
       "settings": {}
-=======
->>>>>>> fa4e687e2af6b079dbcf6540ceab41f40db6621c
     }
   },
   "order": [
     "main",
-<<<<<<< HEAD
     "image_banner_VFEXnk",
-    "test_BFjetJ"
-=======
-    "image_banner_VFEXnk"
->>>>>>> fa4e687e2af6b079dbcf6540ceab41f40db6621c
+    "test_JdrEfU"
   ]
 }
