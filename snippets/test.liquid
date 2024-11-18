@@ -1,0 +1,28 @@
+{{ 'test.css' | asset_url | stylesheet_tag }}
+
+<div class="product-sort-container">
+  <select id="product-sort" class="product-sort">
+    <option value="featured">Featured</option>
+    <option value="alphabetical-az">Alphabetically, A-Z</option>
+    <option value="alphabetical-za">Alphabetically, Z-A</option>
+    <option value="price-low-to-high">Price, Low to High</option>
+    <option value="price-high-to-low">Price, High to Low</option>
+  </select>
+</div>
+
+<div class="btn-container">
+  <div class="product-list">
+    {% assign data = collections.first.products %}
+    {% for product in data %}
+      <div class="btn-content" data-title="{{ product.title | escape }}" data-price="{{ product.price | money_without_currency }}">
+        <img src="{{ product.images.first | image_url: width: 500, height: 500}}" alt="{{ product.title | escape }}">
+        <p class="text-1">{{ product.title }}</p>
+        <p class="text-2">{{ product.price | money }} VND</p>
+        <button class="button-btn">Add To Cart</button>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script src="{{ 'test.js' | asset_url }}" defer></script>
+

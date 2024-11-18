@@ -1,70 +1,98 @@
-
 .btn-container {
-    width: 100%;
-    height: auto;
-  }
-    
-  .text-1{
-    font-weight: 600;
-    font-size: 20px;
-  }
-  .text-2{
-    color: red;
-  }
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px;
+  background-color: rgb(240, 236, 232);
+}
+
+.product-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.product-list {
+  display: flex;
+  gap: 25px; 
+  transition: transform 0.3s ease-in-out;
+}
+.btn-content {
+  flex: 0 0 calc(25% - 20px); 
+}
+
+.product-list img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
 
 
-   .button-btn{
-    background-color: white;
-    color: rgb(87, 87, 189);
-    font-weight: 700;
-    border-radius: 10px;
-    width: 90%;
-    cursor: pointer;
-    padding: 10px 30px;
-    border: 0.1px solid rgb(212, 194, 194);
-    margin-left: 30px;
-    text-transform: capitalize;
-  }
-  .button-btn:hover{
-    color: white;
-    background-color: #2453d3;
-  }
-  
-  .product-list {
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 20px;
-  }
-  
-  .product-list img {
-    width: 100%; 
-    height: 400px;
-  }
-  
+.slide-prev,
+.slide-next {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-30%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 20px 15px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.slide-prev {
+  left: 10px;
+}
+
+.slide-next {
+  right: 10px;
+}
+
+.text-1{
+  font-weight: 600;
+  font-size: 20px;
+}
+.text-2{
+  color: red;
+}
+
+
+.button-btn{
+  background-color: white;
+  color: rgb(87, 87, 189);
+  font-weight: 700;
+  border-radius: 10px;
+  width: 90%;
+  cursor: pointer;
+  padding: 10px 30px;
+  border: 0.1px solid rgb(212, 194, 194);
+  margin-left: 30px;
+  text-transform: capitalize;
+}
+.button-btn:hover{
+  color: white;
+  background-color: #2453d3;
+}
 
 .product-sort-container {
-    width: 1500px;
-    margin: 20px auto;
-    text-align: right; 
-  }
-  
-  .sort-label {
-    font-size: 16px;
-    margin-right: 10px;
-    vertical-align: middle;
-  }
-  
-  .product-sort {
-    padding: 10px;
-    font-size: 14px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  .product-sort option {
-    padding: 10px;
-  }
-  
+  width: 1500px;
+  margin: 20px auto;
+  text-align: right; 
+}
 
+.sort-label {
+  font-size: 16px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.product-sort {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.product-sort option {
+  padding: 10px;
+}
