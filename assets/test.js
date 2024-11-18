@@ -27,34 +27,39 @@ document.addEventListener("DOMContentLoaded", function () {
     const products = document.querySelectorAll(".btn-content");
     const prevButton = document.querySelector(".slide-prev");
     const nextButton = document.querySelector(".slide-next");
-  
+
     let currentIndex = 0;
-    const productWidth = products[0].offsetWidth + 20; // Độ rộng của mỗi sản phẩm + khoảng cách
-  
+    const visibleCount = 4; // Số lượng ảnh hiển thị cùng lúc
+    const productWidth = products[0].offsetWidth + 25; // Độ rộng của mỗi sản phẩm + khoảng cách
+
+    // Tính tổng số slide
+    const totalSlides = Math.ceil(products.length / visibleCount);
+
     // Hàm cập nhật vị trí slider
     function updateSlider() {
-      productList.style.transform = `translateX(-${currentIndex * productWidth}px)`;
+        productList.style.transform = `translateX(-${currentIndex * productWidth * visibleCount}px)`;
     }
-  
+
     // Nút "Next"
     nextButton.addEventListener("click", () => {
-      if (currentIndex < products.length - 1) {
-        currentIndex++;
-        updateSlider();
-      }
+        if (currentIndex < totalSlides - 1) {
+            currentIndex++;
+            updateSlider();
+        }
     });
-  
+
     // Nút "Prev"
     prevButton.addEventListener("click", () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateSlider();
-      }
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSlider();
+        }
     });
-  
-    // Đảm bảo slider không bị lỗi khi load
+
+    // Đảm bảo slider không bị lỗi khi load lại trang
     window.addEventListener("resize", () => {
-      productList.style.transform = `translateX(-${currentIndex * productWidth}px)`;
+        updateSlider();
     });
-  });
+});
+
   

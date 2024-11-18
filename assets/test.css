@@ -14,12 +14,14 @@
 
 .product-list {
   display: flex;
-  gap: 25px; 
   transition: transform 0.3s ease-in-out;
 }
+
 .btn-content {
-  flex: 0 0 calc(25% - 20px); 
+  flex: 0 0 calc(25% - 25px); /* Đảm bảo mỗi phần tử chiếm 25% và có khoảng cách giữa các ảnh */
+  margin-right: 28px; /* Khoảng cách giữa các ảnh */
 }
+
 
 .product-list img {
   width: 100%;
