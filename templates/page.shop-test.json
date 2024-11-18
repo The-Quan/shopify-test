@@ -7,13 +7,21 @@
         "padding_bottom": 28
       }
     },
+<<<<<<< HEAD
     "test_BFjetJ": {
+=======
+    "test_JdrEfU": {
+>>>>>>> 9349f7077b46e3cd7fc678963c80bd08e22b7e70
       "type": "test",
       "settings": {}
     }
   },
   "order": [
     "main",
+<<<<<<< HEAD
     "test_BFjetJ"
+=======
+    "test_JdrEfU"
+>>>>>>> 9349f7077b46e3cd7fc678963c80bd08e22b7e70
   ]
 }
